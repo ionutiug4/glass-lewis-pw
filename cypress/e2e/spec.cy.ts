@@ -31,7 +31,7 @@ describe("Navigate to page", () => {
       .checkCountryFilter(countryFilter);
   });
 
-  it.only("LP-TC-4 resets country filter results", () => {
+  it("LP-TC-4 resets country filter results", () => {
     const countryFilter: string = "Belgium";
     landingPage
       .checkCountryFilter(countryFilter)
