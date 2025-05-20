@@ -28,7 +28,9 @@ export class LandingPageClass {
   }
 
   clickResetResultsByCountryFilterButton(): this {
-    this.elements.getResetPageCountryFilerButton().click({ force: true });
+    this.elements.getCountryFilterContainer().within(() => {
+      this.elements.getResetPageCountryFilerButton().click({ force: true });
+    });
     return this;
   }
 

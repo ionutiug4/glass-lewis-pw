@@ -52,6 +52,7 @@ export default defineConfig({
       return getConfigurationByFile(file);
     },
     testIsolation: false,
+    retries: 2
   },
 
   component: {

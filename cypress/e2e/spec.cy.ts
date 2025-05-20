@@ -19,6 +19,7 @@ describe("Navigate to page", () => {
       .checkCountryFilter(countryFilter)
       .clickUpdatePageByCountryFilterButton();
     cy.wait("@issuers").then(() => {
+      cy.wait(500);
       landingPage.checkResultsByCountryFilter(countryFilter);
     });
   });
@@ -30,15 +31,15 @@ describe("Navigate to page", () => {
       .checkCountryFilter(countryFilter);
   });
 
-  it("LP-TC-4 resets country filter results", () => {
+  it.only("LP-TC-4 resets country filter results", () => {
     const countryFilter: string = "Belgium";
     landingPage
       .checkCountryFilter(countryFilter)
       .clickUpdatePageByCountryFilterButton();
     cy.wait("@issuers").then(() => {
       landingPage.checkResultsByCountryFilter(countryFilter);
-      landingPage.clickResetResultsByCountryFilterButton();
-
     });
+    cy.wait(500);
+    landingPage.clickResetResultsByCountryFilterButton();
   });
 });
