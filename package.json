@@ -1,0 +1,29 @@
+{
+  "name": "glass-lewis-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "license": "ISC",
+  "description": "automation tests",
+  "author": "ionutiug4",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "cypress open",
+    "dev": "cypress run --browser chrome --env grepTags=regression,configFile=development"
+  },
+  "devDependencies": {
+    "@cypress/grep": "^4.1.0",
+    "@types/fs-extra": "^11.0.4",
+    "cypress": "^14.3.3",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "fs-extra": "^11.3.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "moment": "^2.30.1"
+  }
+}

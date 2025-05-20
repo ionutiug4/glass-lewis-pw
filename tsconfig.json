@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "ES2015",
+        "moduleResolution": "node",
+        "lib": ["es6", "es7", "dom"],
+        "types": ["cypress", "node"],
+        "strict": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "."
+    },
+    "include": ["**/*.ts", "cypress/types/.cypress-mochawesome-reporter.d.ts", "cypress/support/.index.d.ts"],
+    "exclude": ["node_modules"]
+}
