@@ -2,7 +2,7 @@ import { LandingPageClass } from "cypress/pages/LandingPage";
 
 const landingPage = new LandingPageClass();
 
-describe("Navigate to page", () => {
+describe("Landing page tests", () => {
   beforeEach(() => {
     cy.visit("/WD/?siteId=DemoClient");
     cy.intercept("POST", "**/WD/Api/Data//Issuers").as("issuers");

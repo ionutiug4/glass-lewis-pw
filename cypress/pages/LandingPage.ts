@@ -60,4 +60,26 @@ export class LandingPageClass {
       }
     });
   }
+
+  checkCompanySearchFilterExists(): this {
+    this.elements.getSearchForCompanyFilterInput().should("exist");
+    return this;
+  }
+
+  checkCompanyNameFilterIsVisible(companyName: string) {
+    cy.get("#header-search-input_listbox").within(() => {
+      cy.contains("li", companyName).should("exist").and("be.visible");
+    });
+  }
+
+  selectCompanyFilter(companyName: string) {
+    cy.get("#header-search-input_listbox").within(() => {
+      cy.contains("li", companyName).click({ force: true });
+    });
+  }
+
+  checkCompanyMeetingsHeader(companyName: string): this {
+    cy.get("#detail-issuer-name").should("have.text", companyName);
+    return this;
+  }
 }
